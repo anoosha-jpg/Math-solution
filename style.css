@@ -1,3 +1,85 @@
-*{
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+body {
+    background: linear-gradient(120deg, #f6d365, #fda085);
+    font-family: 'Comic Neue', cursive;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 30px;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    animation: popIn 1s ease-out;
+}
+
+h2 {
+    font-size: 40px;
+    color: #ff5e57;
+    text-shadow: 2px 2px #ffc300;
+    margin-bottom: 20px;
+}
+
+.emoji {
+    font-size: 50px;
+    animation: bounce 2s infinite;
+}
+
+.output {
+    font-size: 22px;
+    color: #333;
+    line-height: 2;
+    border: 2px dashed #ffa502;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    background: #fffcf2;
+    animation: fadeInText 2s ease-in-out;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
